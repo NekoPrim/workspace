@@ -154,14 +154,12 @@ int main() {
 // getline
     cout << "\ngetline" << "\n------------------------------------------" << endl;
 
-    // angry using string
-   char my_name [20] {};
+   string my_name {};
    
    cout << "Enter your full name: ";
    cin.clear();
    cin.ignore();
-   cin.getline(my_name, 20);
-//    getline(cin, full_name);
+   getline(cin, my_name);
    
    cout << "Your full name is: " << my_name << endl;
     
