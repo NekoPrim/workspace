@@ -30,7 +30,8 @@ Reuse existing functionality in libraries and in the std::string class!
 */
 
 #include <iostream>
-# include <string>
+#include <string>
+#include <vector>
 
 using namespace std;
 
@@ -80,6 +81,22 @@ int main() {
     // } while (selection != 'N' && selection != 'n' && message_encoded);
     
     cout << endl;
+    cout << "**********************************************" << endl;
+    cout << endl;
+
+    string user_input {};
+
+    cout << "Make a pyramid" << endl;
+    cout << "\nEnter a phrash, letters, or numbers: " << endl;
+    getline(cin, user_input);
+
+    if (user_input.size() > 1) {
+        string space {" "};
+        char make_pyramid [user_input.size()] {};
+    } else {
+        cout << user_input << endl;
+    }
+
     return 0;
 }
 
