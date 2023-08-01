@@ -8,6 +8,35 @@
 
 using namespace std;
 
+const double pi {3.14159};
+
+double calc_area_circle(double radius) {
+    return pi * radius * radius;
+}
+
+double calc_volume_cylinder(double radius, double height) {
+//    return pi * radius * radius * height;
+    return calc_area_circle(radius) * height;
+}
+
+void area_circle() {
+    double radius{};
+    cout << "\nEnter the radius of the circle: ";
+    cin >> radius;
+    cout << "The area of a circle with radius " << radius << " is " << calc_area_circle(radius) << endl;
+}
+
+void volume_cylinder() {
+    double radius {};
+    double height {};
+    cout << "\nEnter the radius of the cylinder: ";
+    cin >> radius;
+    cout << "\nEnter the height of the cylinder: ";
+    cin >> height;
+    
+    cout << "The volume of a cylinder with radius " << radius << " and height " << height << " is " << calc_volume_cylinder(radius, height) << endl;
+}
+
 int main() {
     
     double num {};
@@ -68,6 +97,14 @@ int main() {
     //----WRITE YOUR CODE ABOVE THIS LINE----
     //----DO NOT MODIFY THE CODE BELOW THIS LINE----
     cout << "The individual bill at location 1 will be $" << individual_bill_1 << "\n" << "The individual bill at location 2 will be $" << individual_bill_2 << "\n" << "The individual bill at location 3 will be $" << individual_bill_3;
+
+    cout << endl;
+    cout << "\n***********************************" << endl;
+    cout << endl;
+
+    area_circle();
+    area_circle();
+    volume_cylinder();
 
     cout <<  endl;
     return 0;
